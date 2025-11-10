@@ -1,0 +1,202 @@
+/*
+ * ARQUIVO: estiloSobre.css
+ * Projeto: Math Fusion Tech
+ * Foco: Estilização da página "Sobre"
+ */
+
+/* Container principal da página */
+.main-sobre {
+    /* Centraliza o conteúdo (Desktop) */
+    max-width: var(--content-width-desktop);
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: justify;
+}
+
+/* O container de cada seção */
+.about-container {
+    padding: 1.5rem;
+    background-color: var(--bg-section);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 153, 0.2);
+    margin-bottom: 2rem;
+}
+
+.about-container p {
+    color: var(--text-light);
+}
+
+.about-container p strong {
+    color: var(--accent-green);
+    font-weight: 700;
+}
+
+/* Imagem do cartaz */
+.poster-image-container {
+    margin-top: 2rem;
+    border: 2px solid var(--accent-blue);
+    border-radius: 5px;
+}
+
+.poster-image-container img {
+    width: 50%;
+}
+
+/* Listas de Objetivos, Público, Módulos */
+.lista-objetivos,
+.lista-publico,
+.lista-modulos {
+    list-style-type: none;
+    /* Remove bullets padrão */
+    padding-left: 0;
+    margin-top: 1.5rem;
+}
+
+.lista-objetivos li,
+.lista-publico li,
+.lista-modulos li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+/* Ícone "check" neon */
+.lista-objetivos li::before,
+.lista-publico li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-green);
+    font-weight: 700;
+}
+
+/* Ícone "número" neon para os módulos */
+.lista-modulos li::before {
+    content: '►';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-blue);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.lista-modulos li strong {
+    color: var(--accent-green);
+}
+
+/* Lista da Equipe */
+.team-list {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.team-member {
+    background-color: #0d012a;
+    /* Fundo roxo (pode ser o mesmo do body) */
+    border: 1px solid rgba(51, 153, 255, 0.3);
+    /* Borda azul neon */
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.team-member strong {
+    color: var(--accent-green);
+    font-size: 1.1rem;
+}
+
+.team-member p {
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+/* Seção de Call to Action (CTA) */
+.cta-section {
+    text-align: center;
+    border-color: var(--accent-blue);
+}
+
+.cta-section h2 {
+    color: var(--accent-blue);
+}
+
+/* Botão (reutiliza o estilo do formulário) */
+.btn.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--bg-dark);
+    background-color: var(--accent-green);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    /* Garante que 'a' pareça 'button' */
+}
+
+.btn.btn-primary:hover {
+    background-color: #fff;
+    color: var(--bg-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 153, 0.4);
+}
+
+/* Link de Voltar (reutilizado do form) */
+.link-voltar {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.link-voltar .material-symbols-outlined {
+    margin-right: 0.5rem;
+}
+
+.link-voltar:hover {
+    color: var(--accent-green);
+    text-shadow: none;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .main-sobre {
+        padding: 2rem;
+    }
+
+    .about-container {
+        padding: 2.5rem;
+    }
+
+    .team-list {
+        /* 2 colunas para a equipe em tablets/desktops */
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Botão CTA */
+    .btn.btn-cta {
+        width: auto;
+        padding: 1rem 3rem;
+        margin: 1rem auto 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-list {
+        /* 3 colunas em desktops largos */
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

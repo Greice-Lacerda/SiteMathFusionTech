@@ -1,0 +1,395 @@
+/*
+ * ARQUIVO: estilos.css
+ * Projeto: Math Fusion Tech
+ * Foco: Design Tecnológico, Moderno e Responsivo (Mobile-First)
+ */
+
+/* --- 1. CONFIGURAÇÃO GLOBAL E VARIÁVEIS (TEMA) --- */
+
+/* Importa fontes "Tech" e "Leitura" do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=Roboto:wght@400;700&family=Roboto+Mono&display=swap');
+
+:root {
+    /* Paleta de Cores (Tema Roxo) */
+    --bg-dark: #0d012a;
+    --bg-section: #0d012a;
+    --text-light: #f0f0f0;
+    --text-secondary: #a0a0a0;
+
+    /* Cores de Destaque (Neon) */
+    --accent-green: #00ff99;
+    --accent-red: #ff3333;
+    --accent-blue: #3399ff;
+
+    /* Tipografia */
+    --font-heading: 'Exo 2', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+    --font-code: 'Roboto Mono', monospace;
+
+    /* Controle de Layout (Desktop e TV) */
+    --content-width-desktop: 1200px;
+    --content-width-tv: 1600px;
+}
+
+/* Reset de Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- 2. ESTILOS DE BASE (Mobile-First) --- */
+
+html {
+    font-size: 16px;
+    /* Fonte base */
+    scroll-behavior: smooth;
+    /* Rolagem suave para âncoras */
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Imagens fluidas (sem distorção) */
+img,
+figure {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Títulos com a fonte "Tech" */
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    color: var(--accent-green);
+}
+
+/* Hierarquia de fontes para Mobile */
+h1 {
+    font-size: 2.25rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1.00rem;
+    font-family: var(--font-heading);
+    color: var(--accent-blue);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--accent-green);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Linha horizontal (HR) com estilo "Tech" */
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right,
+            rgba(0, 255, 153, 0),
+            rgba(0, 255, 153, 0.5),
+            rgba(0, 255, 153, 0));
+    margin: 2.5rem 0;
+}
+
+/* Estilo para tags <code> */
+code {
+    font-family: var(--font-code);
+    background-color: #222;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    color: var(--accent-red);
+}
+
+/* Espaçamento de listas */
+ul,
+ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- 3. LAYOUT E COMPONENTES (Mobile-First) --- */
+
+/* Padding base para containers principais em mobile */
+.site-header,
+.roteiro-navegacao,
+main,
+footer {
+    padding: 1.5rem;
+}
+
+/* Cabeçalho */
+.site-header {
+    text-align: center;
+    border-bottom: 0px solid #222;
+}
+
+.site-banner img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 260px;
+    border-bottom: 2px solid var(--accent-green);
+    border-radius: 4px;
+}
+
+.site-header h1 {
+    margin-top: 1.2rem;
+}
+
+#fig-header {
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.instructor {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-top: 0rem;
+}
+
+/* Navegação Rápida (Roteiro) */
+.roteiro-navegacao ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.roteiro-navegacao li {
+    background-color: var(--bg-section);
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    border-left: 4px solid var(--accent-green);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.roteiro-navegacao a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+}
+
+/* Conteúdo Principal (Main) */
+main {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Estilo das Seções */
+section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--bg-section);
+    border-radius: 8px;
+    /* Borda "Tech" com opacidade */
+    border: 1px solid rgba(0, 255, 153, 0.2);
+}
+
+/* Estilo para a imagem do diagrama (Ex: Módulo 1) */
+.diagrama-semantico {
+    border: 4px double var(--accent-green);
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+/* Estilo para a legenda do diagrama */
+.legenda-diagrama {
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/*
+ * ALINHAMENTO DE ÍCONE E TÍTULO
+ */
+
+/* 1. O contêiner (display: flex) */
+.section-header {
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente */
+    margin-bottom: 1rem;
+    /* Espaçamento abaixo do título */
+}
+
+/* 2. O Ícone (Span) */
+.icon-module {
+    font-size: 50px;
+    /* Tamanho do ícone */
+    margin-right: 1rem;
+    /* Espaçamento do texto */
+    color: var(--accent-green);
+    flex-shrink: 0;
+    /* Previne que o ícone "encolha" */
+}
+
+/* 3. Ajuste no Título (h2) */
+.section-header h2 {
+    margin-top: 0;
+    /* Remove margem padrão */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    border-top: 0px solid #222;
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+/* Estilo do Copyright no Rodapé */
+.copyright {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+
+/* --- 4. RESPONSIVIDADE (Tablet) --- */
+
+@media (min-width: 768px) {
+
+    /* Aumenta o padding */
+    .site-header,
+    .roteiro-navegacao,
+    main,
+    footer {
+        padding: 2rem;
+    }
+
+    /* Aumenta fontes */
+    h1 {
+        font-size: 2.75rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Organiza o menu em 2 colunas */
+    .roteiro-navegacao ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* 2 colunas */
+        gap: 1rem;
+    }
+
+    .roteiro-navegacao li {
+        margin-bottom: 0;
+    }
+}
+
+/* --- 5. RESPONSIVIDADE (Desktop) --- */
+
+@media (min-width: 1024px) {
+
+    /* Centraliza o conteúdo e define largura máxima */
+    .site-header,
+    .roteiro-navegacao,
+    main,
+    footer {
+        max-width: var(--content-width-desktop);
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2.5rem;
+    }
+
+    /* Efeito de "Glow" (Brilho Neon) no hover */
+    a:hover {
+        color: #fff;
+        text-shadow: 0 0 8px var(--accent-green), 0 0 16px var(--accent-green);
+    }
+
+    /* Efeito de hover específico para o menu */
+    .roteiro-navegacao li:hover {
+        transform: translateY(-3px);
+        background-color: var(--accent-green);
+    }
+
+    .roteiro-navegacao a:hover {
+        color: var(--bg-dark);
+        /* Texto escuro no fundo verde */
+        text-shadow: none;
+        /* Remove o glow */
+    }
+
+    /* Organiza o menu em 3 colunas (Perfeito para 9 itens) */
+    .roteiro-navegacao ul {
+        grid-template-columns: 1fr 1fr 1fr;
+        /* 3 colunas */
+    }
+}
+
+/* --- 6. RESPONSIVIDADE (Telas Grandes / TVs) --- */
+
+@media (min-width: 1920px) {
+
+    /* Aumenta fonte base para legibilidade em telas grandes */
+    html {
+        font-size: 18px;
+    }
+
+    /* Alarga o container principal */
+    .site-header,
+    .roteiro-navegacao,
+    main,
+    footer {
+        max-width: var(--content-width-tv);
+    }
+}
+
+/* --- 7. RESPONSIVIDADE (Mobile Pequeno) --- */
+
+@media (max-width: 480px) {
+
+    /* Ajusta ícones em telas muito pequenas */
+    .icon-module {
+        font-size: 40px;
+        /* Reduz um pouco o ícone */
+        margin-right: 0.75rem;
+        /* Reduz o espaçamento */
+    }
+
+    /* Ajusta títulos em telas muito pequenas */
+    .section-header h2 {
+        font-size: 1.5rem;
+        /* Ajusta o tamanho da fonte do título */
+    }
+}

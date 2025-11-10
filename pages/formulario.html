@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 1. Estilo Principal (Caminho Corrigido) -->
+    <link rel="stylesheet" href="../styles/estiloIndex.css">
+
+    <!-- 2. Novo Estilo (Caminho Corrigido) -->
+    <link rel="stylesheet" href="../styles/estiloFormulario.css">
+
+    <!-- Biblioteca de Ícones (Google Material Symbols) -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>Inscrição - Math&langle;&langle;Fusion&rangle;&rangle;Tech</title>
+</head>
+
+<body>
+
+    <!-- Cabeçalho (Corrigido e Restaurado) -->
+    <header class="site-header">
+        <div id="fig-header">
+            <figure class="site-banner">
+                <!-- Caminho da Imagem Corrigido -->
+                <img src="../img/BannerClassroom.png"
+                    alt="Banner do projeto Math Fusion Tech, com o símbolo Pi e formas geométricas sobre um fundo de circuito.">
+            </figure>
+        </div>
+
+        <br>
+
+        <h1>Construção de Projetos Web</h1>
+        <h2>Do HTML básico à criação de um Mathlet interativo.</h2>
+
+        
+    </header>
+
+    <hr>
+
+    <!-- Conteúdo Principal da Página de Formulário -->
+    <main class="main-formulario">
+
+        <section class="form-container">
+            <div class="section-header">
+                <span class="material-symbols-outlined icon-module">
+                    assignment_ind
+                </span>
+                <h2>Faça parte do Projeto - Inscrição</h2>
+            </div>
+
+            <!-- A Mensagem de Status foi movida para baixo, para junto do botão 'Enviar' -->
+
+            <p>
+                Seja bem-vindo(a) ao formulário de inscrição para o projeto de extensão
+                <strong>Math&langle;&langle;Fusion&rangle;&rangle;Tech</strong>!
+            </p>
+
+            <p>Nosso projeto visa modernizar o ensino da Matemática na educação básica através da criação e aplicação de
+                tecnologias interativas. Se você é um(a) professor(a), estudante de licenciatura em Matemática ou tem
+                interesse em inovação e tecnologia na educação, esta é a sua chance de fazer parte de uma iniciativa que
+                vai transformar a sala de aula.
+            </p>
+
+            <p>
+                Ao participar, você irá:
+            </p>
+
+            <ul class="lista-beneficios">
+                <li>
+                    <strong>Desenvolver Mathlets:</strong> Ferramentas digitais interativas que funcionam como
+                    laboratórios
+                    virtuais de Matemática.
+                </li>
+
+                <li>
+                    <strong>Aprender e Colaborar:</strong> Participar de atividades teóricas e práticas, explorando
+                    conceitos e
+                    ferramentas tecnológicas(como GeoGebra, Python, HTML, CSS, Javascript, GitHub e outras) em um
+                    ambiente colaborativo.
+                </li>
+
+                <li>
+                    <strong>Contribuir para a Inovação:</strong> Ajudar a construir uma rede de educadores comprometidos
+                    em
+                    utilizar a tecnologia para tornar o aprendizado de Matemática mais dinâmico, acessível e
+                    significativo.
+                </li>
+            </ul>
+
+            <p>
+                Junte-se a nós para desvendar a Matemática do futuro! Preencha os campos abaixo para registrar seu
+                interesse. Os campos marcados com * são obrigatórios.
+            </p>
+
+            <form id="form-inscricao" class="tech-form">
+
+                <!-- Bloco 1: Dados Pessoais -->
+                <fieldset>
+                    <legend>1. Dados Pessoais</legend>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone (WhatsApp) *</label>
+                        <input type="tel" id="telefone" name="telefone" class="form-control"
+                            placeholder="(XX) XXXXX-XXXX" required>
+                    </div>
+                    <div class="form-group-grid">
+                        <div class="form-group">
+                            <label for="naturalidade">Naturalidade</label>
+                            <input type="text" id="naturalidade" name="naturalidade" class="form-control"
+                                placeholder="Ex: Rio de Janeiro">
+                        </div>
+                        <div class="form-group">
+                            <label for="municipio">Município de Atuação/Estudo *</label>
+                            <input type="text" id="municipio" name="municipio" class="form-control"
+                                placeholder="Ex: Duque de Caxias" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Bloco 2: Ocupação -->
+                <fieldset>
+                    <legend>2. Ocupação</legend>
+                    <div class="form-group">
+                        <label>Qual a sua ocupação atual? *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="ocupacao" value="Professor(a) da Educação Básica" required>
+                                Professor(a) da Educação Básica</label>
+                            <label><input type="radio" name="ocupacao" value="Professor(a) do Ensino Superior">
+                                Professor(a) do Ensino Superior</label>
+                            <label><input type="radio" name="ocupacao" value="Estudante de Licenciatura em Matemática">
+                                Estudante de Licenciatura em Matemática</label>
+                            <label><input type="radio" name="ocupacao" value="Outro"> Outro:</label>
+                        </div>
+                        <input type="text" id="ocupacao-outro" name="ocupacao-outro" class="form-control"
+                            placeholder="Por favor, especifique" style="display: none; margin-top: 10px;">
+                    </div>
+                    <div class="form-group">
+                        <label for="instituicao">Em qual instituição de ensino você atua/estuda? (Nome da escola,
+                            universidade, etc.) *</label>
+                        <input type="text" id="instituicao" name="instituicao" class="form-control" required>
+                    </div>
+                </fieldset>
+
+                <!-- Bloco 3: Perguntas Abertas -->
+                <fieldset>
+                    <legend>3. Experiência e Interesse</legend>
+                    <div class="form-group">
+                        <label for="tecnologia">3.1. Você já utilizou tecnologias digitais (como GeoGebra, Desmos, ou
+                            outras
+                            ferramentas) no ensino de Matemática? Em caso afirmativo, quais?</label>
+                        <textarea id="tecnologia" name="tecnologia" class="form-control" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="programacao">3.2. Você tem alguma experiência prévia com linguagens de programação
+                            (como
+                            HTML, CSS, Javascript ou Python)?</label>
+                        <textarea id="programacao" name="programacao" class="form-control" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="interesse">3.3. O que motivou seu interesse em participar do projeto
+                            Math&langle;&langle;Fusion&rangle;&rangle;Tech? *</label>
+                        <textarea id="interesse" name="interesse" class="form-control" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="expectativas">3.4. Quais são suas expectativas em relação ao projeto?</label>
+                        <textarea id="expectativas" name="expectativas" class="form-control" rows="5"></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Bloco 4: Disponibilidade -->
+                <fieldset>
+                    <legend>4. Disponibilidade</legend>
+                    <div class="form-group">
+                        <label for="disponibilidade-texto">4.1. Qual é a sua disponibilidade para participar das
+                            reuniões
+                            síncronas, que acontecerão uma vez por mês, com duração de 1 horas?</label>
+                        <textarea id="disponibilidade-texto" name="disponibilidade-texto" class="form-control" rows="4"
+                            placeholder="Ex: 'Posso participar tranquilamente', 'Tenho restrições nas primeiras semanas', etc."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>4.2. Para nos ajudar a planejar as reuniões síncronas, por favor, assinale as melhores
+                            opções:
+                            *</label>
+                        <div class="horario-grid">
+                            <!-- Segunda -->
+                            <label><input type="checkbox" name="disponibilidade-horario" value="Segunda - Manhã">
+                                Segunda (Manhã)</label>
+                            <label><input type="checkbox" name="disponibilidade-horario" value="Segunda - Tarde">
+                                Segunda (Tarde)</label>
+                            <label><input type="checkbox" name="disponibilidade-horario" value="Segunda - Noite">
+                                Segunda (Noite)</label>
+                            <!-- Terça -->
+                            <label><input type="checkbox" name="disponibilidade-horario" value="Terça - Manhã"> Terça
+                                (Manhã)</label>
+                            <label><input type="checkbox" name="disponibilidade-horario" value="Terça - Tarde"> Terça
+                                (Tarde)</label>
+                            <label><input type="checkbox" name="disponibilidade-horario" value="Terça - Noite"> Terça
+                                (Noite)</label>
+                            <!-- Quarta -->
+                            <label><input type="checkbox" name="disponibilidade-horario" value="Quarta - Manhã"> Quarta
+                                (Manhã)</label>
+                            <label><input type="checkbox" name="disponibilidade-horario" value="Quarta - Tarde"> Quarta
+                                (Tarde)</label>
+                            <label><input type="checkbox" name="disponibilidade-horario" value="Quarta - Noite"> Quarta
+                                (Noite)</label>
+                            <!-- Quinta -->
+                            <label><input type="checkbox" name="disponibilidade-horario" value="Quinta - Manhã"> Quinta
+                                (Manhã)</label>
+                            <label><input type="checkbox" name="disponibilidade-horario" value="Quinta - Tarde"> Quinta
+                                (Tarde)</label>
+                            <label><input type="checkbox" name="disponibilidade-horario" value="Quinta - Noite"> Quinta
+                                (Noite)</label>
+                            <!-- Sexta -->
+                            <label><input type="checkbox" name="disponibilidade-horario" value="Sexta - Manhã"> Sexta
+                                (Manhã)</label>
+                            <label><input type="checkbox" name="disponibilidade-horario" value="Sexta - Tarde"> Sexta
+                                (Tarde)</label>
+                            <label><input type="checkbox" name="disponibilidade-horario" value="Sexta - Noite"> Sexta
+                                (Noite)</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-submission-area">
+                    <button type="submit" id="btn-enviar-inscricao" class="btn btn-primary">
+                        <span id="btn-text">Enviar Inscrição</span>
+                        <span id="btn-loader" class="loader" style="display: none;"></span>
+                    </button>
+                    <p id="status-message" class="status-message" style="display: none;"></p>
+                </div>
+
+            </form>
+
+            <!-- Link de Voltar (Caminho Corrigido) -->
+            <a href="../index.html" class="link-voltar">
+                <span class="material-symbols-outlined">
+                    arrow_back
+                </span>
+                Voltar para a Página Principal
+            </a>
+
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- O Rodapé é reutilizado -->
+    <footer>
+        <p class="copyright">
+            &copy; Construção de Projetos Web - UERJ - 2025
+        </p>
+        <p>
+            Material desenvolvido para fins didáticos.
+        </p>
+    </footer>
+
+    <script src="../logic/formulario.js" defer></script>
+
+</body>
+
+</html>

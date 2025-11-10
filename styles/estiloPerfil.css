@@ -1,0 +1,302 @@
+/*
+ * ARQUIVO: estiloPerfil.css
+ * Projeto: Math Fusion Tech
+ * Foco: Estilização da página de perfil da Coordenadora
+ * AJUSTE: Refatoração da Frase Motivacional para dentro do Cabeçalho.
+ */
+
+/* Container principal da página */
+.main-perfil {
+    max-width: var(--content-width-desktop);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* --- Secção 1: Cabeçalho do Perfil --- */
+.perfil-header {
+    display: flex;
+    flex-direction: row;
+    /* Foto ao lado do texto */
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilo da Foto de Perfil */
+.perfil-foto {
+    flex-shrink: 0;
+    /* Impede que a foto encolha */
+    width: 150px;
+    height: 150px;
+}
+
+.perfil-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Garante que a foto preencha o círculo */
+    border-radius: 50%;
+    /* Faz a imagem redonda */
+    border: 4px solid var(--accent-green);
+    /* Borda neon */
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.3);
+    /* Efeito glow */
+}
+
+/* Container para o texto ao lado da foto */
+.perfil-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-header h2 {
+    color: var(--accent-green);
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.perfil-header h3 {
+    color: var(--text-secondary);
+    font-size: 1.3rem;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+}
+
+/* --- Secção 2: Resumo Profissional --- */
+.perfil-resumo h3 {
+    color: var(--accent-green);
+    margin-bottom: 1rem;
+}
+
+.perfil-quote {
+    background-color: #000;
+    border-left: 5px solid var(--accent-green);
+    padding: 1.5rem;
+    margin: 0;
+    /* Reset de margem do blockquote */
+    border-radius: 0 5px 5px 0;
+
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+/* --- Secção 3: Formação Acadêmica --- */
+.perfil-formacao h3 {
+    color: var(--accent-green);
+    margin-bottom: 1.5rem;
+}
+
+.formacao-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formacao-list li {
+    display: flex;
+    align-items: flex-start;
+    /* Alinha ícone e texto no topo */
+    gap: 1rem;
+    background-color: #000;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(51, 153, 255, 0.3);
+}
+
+.formacao-list .icon {
+    font-size: 2rem;
+    color: var(--accent-blue);
+    margin-top: 0.25rem;
+    /* Alinha o ícone visualmente */
+}
+
+.formacao-list h4 {
+    font-family: var(--font-heading);
+    color: var(--text-light);
+    font-size: 1.2rem;
+    margin: 0 0 0.25rem 0;
+}
+
+.formacao-list p {
+    font-family: var(--font-body);
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+/* --- Secção 4: Links Relevantes --- */
+.perfil-links h3 {
+    color: var(--accent-green);
+    margin-bottom: 1rem;
+}
+
+/* Reutilizando o estilo da lista de publicações */
+.links-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 1 coluna em mobile */
+    gap: 0.75rem;
+}
+
+.links-list li {
+    background-color: #000;
+    border-left: 3px solid var(--accent-blue);
+    padding: 1rem 1.5rem;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+.links-list li a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.links-list li:hover {
+    background-color: rgba(51, 153, 255, 0.2);
+}
+
+.links-list li a:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsividade --- */
+
+/* Links em 2 colunas em telas maiores */
+@media (min-width: 768px) {
+    .links-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Ajuste do Cabeçalho em mobile */
+@media (max-width: 600px) {
+    .perfil-header {
+        flex-direction: column;
+        /* Foto em cima do texto */
+        align-items: center;
+        /* Centraliza */
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .perfil-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .perfil-header h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Centraliza a frase motivacional em mobile */
+    .perfil-info #frase-autor {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .perfil-info #frase-motivacional {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .perfil-info #frase-motivacional::before {
+        display: none;
+        /* Esconde aspas grandes em mobile */
+    }
+}
+
+
+/* * --- ESTILOS REATORADOS PARA A FRASE MOTIVACIONAL ---
+ * Estes estilos aplicam-se à frase *dentro* do .perfil-info
+ */
+.perfil-info #frase-motivacional {
+    position: relative;
+    font-size: 1.rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    /* Espaço do título */
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    /* Espaço para a aspa */
+}
+
+/* Aspas de Abertura (Mais subtil) */
+.perfil-info #frase-motivacional::before {
+    content: '“';
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2.5rem;
+    /* Tamanho reduzido */
+    color: var(--accent-blue);
+    opacity: 0.5;
+    /* Mais subtil */
+    line-height: 0;
+
+    position: absolute;
+    top: 0.25rem;
+    left: 0rem;
+    z-index: 1;
+}
+
+/* Aspas de Abertura (Mais subtil) */
+.perfil-info #frase-motivacional::after {
+    content: '“';
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2.5rem;
+    /* Tamanho reduzido */
+    color: var(--accent-blue);
+    opacity: 0.5;
+    /* Mais subtil */
+    line-height: 0;
+    transform: scale(-1);
+    position: absolute;
+    top: 1rem;
+    right: -1.8rem;
+    z-index: 1;
+}
+
+/* Estilo para a citação (Autor/Origem) */
+.perfil-info #frase-autor {
+    display: block;
+    text-align: left;
+    padding-left: 1.5rem;
+    /* Alinha com a citação */
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+
+/* --- Link de Voltar --- */
+.link-voltar {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 2rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.link-voltar .material-symbols-outlined {
+    margin-right: 0.5rem;
+}
+
+.link-voltar:hover {
+    color: var(--accent-green);
+    text-shadow: none;
+}

@@ -221,7 +221,8 @@ textarea.form-control {
     /* Posicionamento "suspenso" */
     position: absolute;
     top: -1rem;
-    left: -0.5rem;
+    left: -2rem;
+    padding: 0.5rem;
     line-height: 1;
     /* Previne altura de linha excessiva */
 }

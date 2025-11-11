@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 1: HTML - Projeto Math&langle;&langle;Fusion&rangle;&rangle;Tech</title>
+
+    <!-- 1. Estilo Principal (Reutilizado) -->
+    <link rel="stylesheet" href="../styles/estiloIndex.css">
+
+    <!-- 2. Novo Estilo (Específico para Módulos) -->
+    <link rel="stylesheet" href="../styles/estiloModulo.css">
+
+    <!-- Biblioteca de Ícones (Google Material Symbols) -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <!-- O Cabeçalho é reutilizado da página principal -->
+    <header class="site-header">
+        <div id="fig-header">
+            <figure class="site-banner">
+                <img src="../img/BannerClassroom.png"
+                    alt="Banner do projeto Math Fusion Tech, com o símbolo Pi e formas geométricas sobre um fundo de circuito.">
+            </figure>
+        </div>
+        <br>
+        <h1>Construção de Projetos Web</h1>
+        <h2>Do HTML básico à criação de um Mathlet interativo.</h2>
+
+    </header>
+
+    <hr>
+
+    <!-- Conteúdo Principal da Página -->
+    <main class="main-modulo">
+
+        <!-- Título do Módulo -->
+        <section class="modulo-header">
+            <div class="section-header">
+                <span class="material-symbols-outlined icon-module">
+                    code
+                </span>
+                <h2>Módulo 1: Fundamentos do HTML</h2>
+            </div>
+            <p class="intro-paragraph">
+                Bem-vindo ao ponto de partida! Neste módulo, vamos entender o que é o HTML, por que ele é o "esqueleto"
+                de toda a web e quais ferramentas essenciais precisamos para começar a construir.
+            </p>
+        </section>
+
+        <!-- Sumário do Módulo -->
+        <nav class="modulo-sumario">
+            <h3>Sumário do Módulo</h3>
+            <ul>
+                <li><a href="#definicao">1. O Que é HTML?</a></li>
+                <li><a href="#ferramentas">2. Ferramentas Essenciais (Nosso "Escritório")</a></li>
+                <li><a href="#estrutura">3. A Estrutura Básica de uma Página</a></li>
+                <li><a href="#semantica">4. Semântica: O Ponto Principal</a></li>
+                <li><a href="#video">5. Vídeo-Aula do Encontro</a></li>
+                <li><a href="#tarefas">6. Próximos Passos e Materiais Complementares</a></li>
+            </ul>
+        </nav>
+
+        <hr>
+
+        <!-- Seção 1: Definição -->
+        <section id="definicao">
+            <h3>1. O Que é HTML?</h3>
+            <p>HTML significa <strong>HyperText Markup Language</strong> (Linguagem de Marcação de Hipertexto). Não é
+                uma linguagem de programação (como o JavaScript), mas sim uma <span style="color:aqua">linguagem de marcação</span>. Ela diz ao
+                navegador o que é cada pedaço de conteúdo.</p>
+
+            <blockquote class="modulo-quote">
+                <strong>Analogia:</strong> Se o site fosse um carro, o HTML seria o chassi e a
+                estrutura. Se fosse um corpo humano, o HTML seria o esqueleto. Ele dá a forma, mas não tem (ainda) o
+                design ou a função.
+            </blockquote>
+        </section>
+
+        <!-- Seção 2: Ferramentas -->
+        <section id="ferramentas">
+            <h3>2. Ferramentas Essenciais (Nosso "Escritório")</h3>
+            <p>Para construir nossos sites, precisamos de duas ferramentas principais (como vimos no Material I):</p>
+
+            <div class="ferramentas-grid">
+                <div class="ferramenta-card">
+                    <h4>VS Code (Visual Studio Code)</h4>
+                    <p>O nosso "escritório digital" ou "caderno superpoderoso". É o editor onde vamos escrever todo o
+                        nosso código.</p>
+                    <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer"
+                        class="card-link">Baixar o VS Code</a>
+                </div>
+
+                <div class="ferramenta-card">
+                    <h4>GitHub</h4>
+                    <p>O nosso "portfólio na nuvem". É onde salvaremos nossos projetos e publicaremos nossos sites
+                        (usando o Git Desktop e GitHub Pages).</p>
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="card-link">Criar
+                        Conta no GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Estrutura -->
+        <section id="estrutura">
+            <h3>3. A Estrutura Básica de uma Página</h3>
+            <p>Todo arquivo ".html" segue a mesma estrutura básica. Este é o "esqueleto" mínimo
+                para qualquer página web moderna:</p>
+
+            <div class="code-block">
+                <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+                <pre><code>&lt;html lang="<span style="color:rgb(244, 36, 36)">pt-br</span>"&gt;</code></pre>
+                <pre><code>  &lt;head&gt;</code></pre>
+                <pre><code> <span style="color:aqua">&lt;!-- O "Cérebro" invisível da página --&gt;</span></code></pre>
+                <pre><code>    &lt;meta charset="UTF-8"&gt;</code></pre>
+                <pre><code>    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                <pre><code>    &lt;title&gt;<span style="color:rgb(78, 245, 7)">Título na Aba do Navegador</span>&lt;/title&gt;</code></pre>
+                <pre><code>  &lt;/head&gt;</code></pre>
+                <pre><code>  &lt;body&gt;</code></pre>
+                <pre><code> <span style="color:aqua">&lt;!-- O "Corpo" visível da página --&gt;</span></code></pre>
+                <pre><code>    &lt;h1&gt;<span style="color:rgb(78, 245, 7)">Olá, mundo!</span>&lt;/h1&gt;</code></pre>
+                <pre><code>    &lt;p&gt;<span style="color:rgb(78, 245, 7)">Todo o nosso conteúdo vai aqui.</span>&lt;/p&gt;</code></pre>
+                <pre><code>  &lt;/body&gt;</code></pre>
+                <pre><code>&lt;/html&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- Seção 4: Semântica -->
+        <section id="semantica">
+            <h3>4. Semântica: O Ponto Principal</h3>
+            <p>O HTML moderno não é sobre o que parece, mas sobre o que significa. Usar a tag certa para o trabalho
+                certo é chamado de HTML Semântico.</p>
+
+            <h4>&squarf; Head vs. Header</h4>
+            <ul class="lista-definicao">
+                <li><code>&lt;head&gt;</code>: O "cérebro" invisível. Contém metadados, links para CSS e o título da
+                    aba.</li>
+                <li><code>&lt;header&gt;</code>: O cabeçalho visível do seu conteúdo. Onde colocamos o banner, o
+                    logo e o título principal da página.</li>
+            </ul>
+
+            <h4>&squarf; Hierarquia de Títulos</h4>
+            <p>As tags <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> criam o "índice" ou a estrutura de tópicos da
+                sua página. Elas são essenciais para acessibilidade (leitores de tela) e SEO (Google).</p>
+            <ul class="lista-definicao">
+                <li><code>&lt;h1&gt;</code>: O título principal da página. (Use apenas UM por página).</li>
+                <li><code>&lt;h2&gt;</code>: Os tópicos principais (como os títulos <code>&lt;h3&gt;</code> nesta
+                    página).</li>
+                <li><code>&lt;h3&gt;</code>: Subtópicos de um <code>&lt;h2&gt;</code>.</li>
+            </ul>
+        </section>
+
+        <!-- Seção 5: Vídeo -->
+        <section id="video">
+            <h3>5. Vídeo-Aula do Encontro</h3>
+            <p>Se você perdeu o nosso encontro síncrono ou quer rever os conceitos, assista à gravação completa abaixo.
+            </p>
+
+            <div class="video-container">
+                
+                <video controls width="100%">
+                    <!-- Substitua 'aula1.mkv' pelo caminho real do seu vídeo -->
+                    <source src="../movies/Greice_Lacerda-PARTE1_HTML.mp4">
+
+                    </p>
+                </video>
+            </div>
+        </section>
+
+        <!-- Seção 6: Tarefas -->
+        <section id="tarefas">
+            <h3>6. Próximos Passos (Sua Missão)</h3>
+            <p>Para o nosso próximo encontro, é essencial que você complete as seguintes tarefas (do Material I e II):
+            </p>
+
+            <ul class="tarefa-list">
+                <li>
+                    <span class="material-symbols-outlined icon">download</span>
+                    <strong>Instalar o VS Code:</strong> Baixe e instale o editor em sua máquina.
+                </li>
+                <li>
+                    <span class="material-symbols-outlined icon">group_add</span>
+                    <strong>Criar Conta no GitHub:</strong> Este será o seu portfólio.
+                </li>
+                <li>
+                    <span class="material-symbols-outlined icon">desktop_windows</span>
+                    <strong>Instalar o GitHub Desktop:</strong> (Opcional, mas recomendado).
+                </li>
+                <li>
+                    <span class="material-symbols-outlined icon">visibility</span><a href="../pages/materialProjeto.html">
+                    <strong>Revisar o Material:</strong> Leia os PDFs e examine o código do "index.html" do nosso site.</a>
+                </li>
+            </ul>
+            <p>Ficou com alguma dúvida? Não hesite em perguntar no nosso grupo de WhatsApp ou no Google Classroom!</p>
+        </section>
+
+        <!-- Link de Voltar -->
+        <a href="../index.html" class="link-voltar">
+            <span class="material-symbols-outlined">
+                arrow_back
+            </span>
+            Voltar para a Página Principal
+        </a>
+
+    </main>
+
+    <hr>
+
+    <!-- O Rodapé é reutilizado -->
+    <footer>
+        <p class="copyright">
+            &copy; Construção de Projetos Web - UERJ - 2025
+        </p>
+        <p>
+            Material desenvolvido para fins didáticos.
+        </p>
+    </footer>
+
+</body>
+
+</html>

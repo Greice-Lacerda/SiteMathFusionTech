@@ -1,0 +1,160 @@
+/*
+ * ARQUIVO: estiloMateriaisComplementares.css
+ * Projeto: Math Fusion Tech
+ * Foco: Estilização da página de Materiais/Downloads
+ * AJUSTE: Adicionados títulos de Módulo (h3)
+ */
+
+/* Container principal da página */
+.main-materiais {
+    max-width: var(--content-width-desktop);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* --- Secção 1: Cabeçalho --- */
+.materiais-header .intro-paragraph {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+
+/* --- Secção 2: Lista de Downloads --- */
+.materiais-lista {
+    margin-top: 2rem;
+}
+
+/* * --- NOVO: Título do Módulo (h3) ---
+ * Estilo para separar os grupos de download.
+ */
+.modulo-titulo {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--accent-blue);
+    /* Azul neon */
+    margin-top: 2.5rem;
+    /* Espaço ACIMA do título */
+    margin-bottom: 1rem;
+    /* Espaço abaixo (para a lista) */
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(51, 153, 255, 0.3);
+    /* Linha azul subtil */
+}
+
+/* Remove a margem do topo do PRIMEIRO título */
+.materiais-lista .modulo-titulo:first-of-type {
+    margin-top: 0;
+}
+
+
+.download-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    /* Remove espaço extra abaixo da lista */
+}
+
+.download-list li {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite quebrar linha em mobile */
+    align-items: center;
+    justify-content: space-between;
+    /* Conteúdo na esquerda, Botão na direita */
+    gap: 1rem;
+    /* Espaço entre o título e o botão */
+
+    background-color: #000;
+    border-left: 3px solid var(--accent-blue);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0 5px 5px 0;
+}
+
+.material-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.material-info .icon {
+    font-size: 2rem;
+    color: var(--accent-red);
+    /* Ícone de PDF (vermelho) */
+}
+
+.material-titulo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+/* Botão de Download */
+.download-link {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+    /* Cor escura do tema */
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+    /* Impede que o texto "Download" quebre a linha */
+}
+
+.download-link:hover {
+    background-color: var(--accent-green);
+    color: var(--bg-dark);
+    transform: translateY(-2px);
+    text-shadow: none;
+    /* Remove o glow genérico de <a> */
+}
+
+/* Estilo para Itens "Em Breve" */
+.download-list li.em-breve {
+    opacity: 0.5;
+    border-left-color: var(--text-secondary);
+}
+
+.download-list li.em-breve .icon {
+    color: var(--text-secondary);
+}
+
+.download-link.disabled {
+    background-color: var(--text-secondary);
+    color: #333;
+    pointer-events: none;
+    /* Impede o clique */
+    cursor: not-allowed;
+}
+
+.download-link.disabled:hover {
+    transform: none;
+}
+
+
+/* --- Link de Voltar --- */
+.link-voltar {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 2rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.link-voltar .material-symbols-outlined {
+    margin-right: 0.5rem;
+}
+
+.link-voltar:hover {
+    color: var(--accent-green);
+    text-shadow: none;
+}

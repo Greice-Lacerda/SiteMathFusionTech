@@ -1,0 +1,272 @@
+/*
+ * ARQUIVO: estiloModulo.css
+ * Projeto: Math Fusion Tech
+ * Foco: Estilização das páginas de conteúdo dos Módulos (Módulo 1, 2, etc.)
+ */
+
+/* Container principal da página */
+.main-modulo {
+    max-width: var(--content-width-desktop);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* --- Cabeçalho do Módulo --- */
+.modulo-header .intro-paragraph {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+
+/* --- Sumário do Módulo --- */
+.modulo-sumario {
+    background-color: #000;
+    border: 1px solid rgba(51, 153, 255, 0.3);
+    /* Borda azul */
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+}
+
+.modulo-sumario h3 {
+    color: var(--accent-green);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 255, 153, 0.2);
+}
+
+.modulo-sumario ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 colunas */
+    gap: 0.75rem;
+}
+
+.modulo-sumario ul li a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.modulo-sumario ul li a:hover {
+    background-color: rgba(0, 255, 153, 0.2);
+    text-shadow: none;
+}
+
+/* Sumário em 1 coluna em mobile */
+@media (max-width: 600px) {
+    .modulo-sumario ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* --- Estilos de Seção Padrão --- */
+.main-modulo section {
+    padding-top: 1.5rem;
+    /* Espaço para a âncora do link */
+}
+
+.main-modulo section h3 {
+    color: var(--accent-green);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Citação / Analogia */
+.modulo-quote {
+    background-color: #000;
+    border-left: 5px solid var(--accent-blue);
+    /* Azul para analogias */
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 5px 5px 0;
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+.modulo-quote strong {
+    color: var(--accent-blue);
+}
+
+/* Lista de Definição (Head vs Header) */
+.lista-definicao {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.lista-definicao li {
+    margin-bottom: 0.75rem;
+}
+
+.lista-definicao li code {
+    font-size: 1rem;
+    color: var(--accent-green);
+}
+
+/* --- Bloco de Código (Estilo VS Code) --- */
+.code-block {
+    background-color: #0c0c14;
+    /* Cor de fundo escura (quase preto) */
+    border: 1px solid rgba(51, 153, 255, 0.3);
+    border-radius: 5px;
+    padding: 1rem;
+    overflow-x: auto;
+    /* Permite rolar horizontalmente se o código for muito longo */
+    margin: 1.5rem 0;
+}
+
+.code-block pre {
+    margin: 0;
+    padding: 0;
+}
+
+.code-block code {
+    font-family: var(--font-code);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    /* Cor de texto clara */
+    background-color: transparent;
+    /* Remove o fundo padrão do <code> */
+    padding: 0;
+}
+
+/* --- Grelha de Ferramentas --- */
+.ferramentas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .ferramentas-grid {
+        grid-template-columns: 1fr;
+        /* 1 coluna em mobile */
+    }
+}
+
+.ferramenta-card {
+    background-color: #000;
+    border: 1px solid rgba(51, 153, 255, 0.3);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ferramenta-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--accent-blue);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.ferramenta-card p {
+    flex-grow: 1;
+}
+
+/* Link em forma de botão */
+.card-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+    /* Cor escura do tema */
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-link:hover {
+    background-color: var(--accent-green);
+    color: var(--bg-dark);
+    transform: translateY(-3px);
+    text-shadow: none;
+    /* Remove o glow genérico de <a> */
+}
+
+/* --- Container do Vídeo --- */
+.video-container {
+    width: 100%;
+    max-width: 500px;
+    /* Limita o tamanho máximo do vídeo */
+    margin: 1.5rem auto;
+    background-color: #000;
+    border: 1px solid rgba(0, 255, 153, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    /* Garante que o vídeo respeite a borda */
+}
+
+.video-container video {
+    display: block;
+    /* Remove espaço extra abaixo do vídeo */
+    width: 100%;
+}
+
+.video-container p {
+    padding: 1rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+/* --- Lista de Tarefas --- */
+.tarefa-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.tarefa-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    background-color: #000;
+    border-left: 3px solid var(--accent-blue);
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0 5px 5px 0;
+}
+
+.tarefa-list .icon {
+    font-size: 1.5rem;
+    color: var(--accent-green);
+}
+
+/* --- Link de Voltar (Padrão) --- */
+.link-voltar {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 2rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.link-voltar .material-symbols-outlined {
+    margin-right: 0.5rem;
+}
+
+.link-voltar:hover {
+    color: var(--accent-green);
+    text-shadow: none;
+}

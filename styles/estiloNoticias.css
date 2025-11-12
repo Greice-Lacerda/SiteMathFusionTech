@@ -1,0 +1,138 @@
+/*
+ * ARQUIVO: estiloNoticias.css
+ * Projeto: Math Fusion Tech
+ * Foco: Estilização da página de Notícias (Timeline)
+ */
+
+/* Container principal da página */
+.main-noticias {
+    max-width: var(--content-width-desktop);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* --- Secção 1: Cabeçalho --- */
+.noticias-header .intro-paragraph {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+
+/* --- Secção 2: Linha do Tempo de Notícias --- */
+.timeline-container {
+    margin-top: 2rem;
+    /* A linha da timeline (opcional, mas elegante) */
+    border-left: 3px solid rgba(51, 153, 255, 0.3);
+    padding-left: 1.5rem;
+}
+
+.noticias-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.news-card {
+    background-color: #000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    position: relative;
+    /* Necessário para o "pin" de data */
+    overflow: hidden;
+    /* Garante que o "pin" respeite o radius */
+}
+
+/* O "pin" de Data (substitui o "status" do cronograma) */
+.card-date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.35rem 1.5rem;
+    border-radius: 0 0 0 10px;
+    /* Canto estilizado */
+}
+
+/* Ponto da Timeline (círculo na borda esquerda) */
+.news-card::before {
+    content: '';
+    position: absolute;
+    top: 2.2rem;
+    left: -2.25rem;
+    /* Puxa para fora, para cima da linha da timeline */
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: var(--accent-green);
+    border: 3px solid var(--bg-dark);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+/* Conteúdo do Card */
+.news-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--accent-green);
+    margin: 0;
+    padding-right: 8rem;
+    /* Espaço para o "pin" de data não sobrepor o título */
+}
+
+.news-card p {
+    color: var(--text-light);
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+    /* Quebra de linha */
+}
+
+/* Estilo para Imagens (como o Cartaz) */
+.news-image-container {
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid rgba(51, 153, 255, 0.3);
+}
+
+.news-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.news-image-container figcaption {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* --- Link de Voltar --- */
+.link-voltar {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 2rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.link-voltar .material-symbols-outlined {
+    margin-right: 0.5rem;
+}
+
+.link-voltar:hover {
+    color: var(--accent-green);
+    text-shadow: none;
+}

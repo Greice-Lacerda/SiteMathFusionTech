@@ -1,0 +1,144 @@
+/*
+ * ARQUIVO: estiloCronograma.css
+ * Projeto: Math Fusion Tech
+ * Foco: Estilização da página de Cronograma (Timeline)
+ */
+
+/* Container principal da página */
+.main-cronograma {
+    max-width: var(--content-width-desktop);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* --- Secção 1: Cabeçalho --- */
+.cronograma-header .intro-paragraph {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+
+/* --- Secção 2: Linha do Tempo --- */
+.timeline-container {
+    margin-top: 2rem;
+}
+
+.cronograma-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.encontro-card {
+    background-color: #000;
+    border-left: 5px solid var(--accent-blue);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0 8px 8px 0;
+    position: relative;
+    /* Necessário para o "status" */
+    overflow: hidden;
+    /* Garante que o "status" respeite o radius */
+}
+
+/* O "pin" de Status (Aguardando, Realizado, etc.) */
+.card-status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--text-secondary);
+    color: #000;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 0.25rem 1.5rem;
+    border-radius: 0 0 0 10px;
+    /* Canto estilizado */
+    text-transform: uppercase;
+}
+
+/* Status: Realizado (Verde) */
+.card-status.status-realizado {
+    background-color: var(--accent-green);
+    color: var(--bg-dark);
+}
+
+/* Status: Próximo (Azul) */
+.card-status.status-proximo {
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+}
+
+/* Conteúdo do Card */
+.card-data {
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.encontro-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--accent-green);
+    margin: 0;
+}
+
+.encontro-card p {
+    color: var(--text-light);
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* Link (reutilizado do estiloModulo.css) */
+.encontro-card .card-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.25rem;
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+    /* Cor escura do tema */
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.encontro-card .card-link:hover {
+    background-color: var(--accent-green);
+    color: var(--bg-dark);
+    transform: translateY(-2px);
+    text-shadow: none;
+}
+
+.encontro-card .card-link.disabled {
+    background-color: var(--text-secondary);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+/* --- Link de Voltar --- */
+.link-voltar {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 2rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.link-voltar .material-symbols-outlined {
+    margin-right: 0.5rem;
+}
+
+.link-voltar:hover {
+    color: var(--accent-green);
+    text-shadow: none;
+}

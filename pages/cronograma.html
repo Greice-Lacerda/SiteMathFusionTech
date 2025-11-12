@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma - Math&langle;&langle;Fusion&rangle;&rangle;Tech</title>
+
+    <!-- 1. Estilo Principal (Reutilizado) -->
+    <link rel="stylesheet" href="../styles/estiloIndex.css">
+
+    <!-- 2. Novo Estilo (Específico para esta página) -->
+    <link rel="stylesheet" href="../styles/estiloCronograma.css">
+
+    <!-- Biblioteca de Ícones (Google Material Symbols) -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <!-- O Cabeçalho é reutilizado da página principal -->
+    <header class="site-header">
+        <div id="fig-header">
+            <figure class="site-banner">
+                <img src="../img/BannerClassroom.png"
+                    alt="Banner do projeto Math Fusion Tech, com o símbolo Pi e formas geométricas sobre um fundo de circuito.">
+            </figure>
+        </div>
+        <br>
+        <h1>Construção de Projetos Web</h1>
+        <h2>Do HTML básico à criação de um Mathlet interativo.</h2>
+
+    </header>
+
+    <hr>
+
+    <!-- Conteúdo Principal da Página -->
+    <main class="main-cronograma">
+
+        <!-- Secção 1: Cabeçalho -->
+        <section class="cronograma-header">
+            <div class="section-header">
+                <span class="material-symbols-outlined icon-module">
+                    calendar_month
+                </span>
+                <h2>Cronograma dos Encontros</h2>
+            </div>
+            <p class="intro-paragraph">
+                Acompanhe o nosso roteiro de encontros. As datas dos módulos futuros são previsionais e podem ser
+                ajustadas em conjunto com a turma.
+            </p>
+        </section>
+
+        <!-- Secção 2: Linha do Tempo (Timeline) -->
+        <section class="timeline-container">
+            <ul class="cronograma-list">
+
+                <!-- Encontro 1: Apresentação (Exemplo de "Realizado") -->
+                <li class="encontro-card">
+                    <!-- O status 'status-realizado' muda a cor -->
+
+                    <div class="card-status status-realizado">Realizado</div>
+                    <div class="card-data">13 de outubro de 2025</div>
+                    <h4>Apresentação do Projeto</h4>
+                    <p>Vamos iniciar nosso projeto Math&langle;&langle;Fusion&rangle;&rangle;Tech com um bate-papo sobre
+                        ferramentas de
+                        desenvolvimento Web: VS CODE, GITHUB,
+                        HTML e CSS.</p>
+                    <!--a href="./modulo1.html" class="card-link">Ver Material do Módulo</a-->
+                </li>
+
+                <!-- Encontro 2: Instalação de Ferramentas Web (Exemplo de "Realizado") -->
+                <li class="encontro-card">
+                    <!-- O status 'status-realizado' muda a cor -->
+                    <div class="card-status status-realizado">Realizado</div>
+                    <div class="card-data">27 de outubro de 2025</div>
+                    <h4>Preparação do Ambiente de Desenvolvimento Web: Instalação do VS Code e Git/GitHub</h4>
+                    <p>Tópicos: Instalação e configuração das
+                        ferramentas (VS Code e Git no Desktop e Criação de Conta no GitHub.</p>
+                    <a href="./modulo1.html" class="card-link">Ver Material do Módulo</a>
+                </li>
+
+                <!-- Encontro 3: Inicio do HTML (Exemplo de "Realizado") -->
+                <li class="encontro-card">
+                    <!-- O status 'status-realizado' muda a cor -->
+                    <div class="card-status status-realizado">Realizado</div>
+                    <div class="card-data">03 de novembro de 2025</div>
+                    <h4>Módulo 1: Fundamentos do HTML</h4>
+                    <p>Tópicos: O que é HTML, estrutura básica da página (`head`, `body`), semântica, e configuração das
+                        ferramentas (VS Code, Git).</p>
+                    <a href="./modulo1.html" class="card-link">Ver Material do Módulo</a>
+                </li>
+
+                <!-- Encontro 4 (Exemplo de "Próximo") -->
+                <li class="encontro-card">
+                    <div class="card-status status-proximo">Próximo Encontro</div>
+                    <div class="card-data">17 de novembro de 2025</div>
+                    <h4>Módulo 1: Fundamentos do HTML</h4>
+                    <p>Tópicos: Estrutura básica da página: `body` e suas divisões).</p>
+                    <a href="./modulo2.html" class="card-link">Ver Material do Módulo</a>
+                </li>
+
+                <!-- Encontro 3 (Exemplo de "Aguardando") -->
+                <li class="encontro-card">
+                    <div class="card-status">Aguardando</div>
+                    <div class="card-data"><!--17 de Novembro de 2025</div>
+                    <h4>Módulo 3: Interatividade com JavaScript</h4>
+                    <p>Tópicos: O que é o DOM, `getElementById`, `addEventListener`, e manipulação de classes CSS com
+                        JS.</p>-->
+                </li>
+
+                <!-- Encontro 4 (Exemplo de "Aguardando") -->
+                <li class="encontro-card">
+                    <div class="card-status">Aguardando</div>
+                    <div class="card-data"><!--15 de Dezembro de 2025</div>
+                    <h4>Módulo 4: IA e Refatoração</h4>
+                    <p>Tópicos: Usando IA (GitHub Copilot, Gemini) como assistente de programação para depurar e
+                        otimizar código.</p>
+                </li>
+
+                <!-- Adicione mais <li>...</li> aqui conforme os módulos avançam -->
+
+            </ul>
+        </section>
+
+
+        <!-- Link de Voltar -->
+        <a href="../index.html" class="link-voltar">
+            <span class="material-symbols-outlined">
+                arrow_back
+            </span>
+            Voltar para a Página Principal
+        </a>
+
+    </main>
+
+    <hr>
+
+    <!-- O Rodapé é reutilizado -->
+    <footer>
+        <p class="copyright">
+            &copy; Construção de Projetos Web - UERJ - 2025
+        </p>
+        <p>
+            Material desenvolvido para fins didáticos.
+        </p>
+    </footer>
+
+</body>
+
+</html>

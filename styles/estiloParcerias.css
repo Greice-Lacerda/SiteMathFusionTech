@@ -1,0 +1,141 @@
+/*
+ * ARQUIVO: estiloParcerias.css
+ * Projeto: Math Fusion Tech
+ * Foco: Estilização da página de Parcerias
+ */
+
+/* Container principal da página */
+.main-parcerias {
+    max-width: var(--content-width-desktop);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* --- Secção 1: Cabeçalho --- */
+.parcerias-header .intro-paragraph {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+
+/* --- Secção 2: Grelha de Parceiros --- */
+.parcerias-grid {
+    display: grid;
+    /* Grelha responsiva:
+       - Tenta encaixar colunas de 300px.
+       - Se não couber, cria uma nova linha.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.parceria-card {
+    background-color: #000;
+    border: 1px solid rgba(51, 153, 255, 0.3);
+    /* Borda azul */
+    border-radius: 8px;
+    overflow: hidden;
+    /* Garante que o logo respeite o radius */
+
+    /* Flexbox para alinhar o conteúdo (logo, texto, botão) */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Empurra o botão para o fundo */
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.parceria-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 255, 153, 0.1);
+    /* Sombra "Glow" verde */
+}
+
+/* Estilo do Logo (Placeholder) */
+.parceria-logo {
+    margin: 0;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* Proporção 16:9 para o logo */
+    background-color: #0c0c14;
+}
+
+.parceria-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Garante que o logo preencha o espaço */
+}
+
+/* Conteúdo de Texto do Card */
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    /* Faz o texto ocupar o espaço disponível */
+}
+
+.card-content h4 {
+    font-family: var(--font-heading);
+    color: var(--accent-green);
+    font-size: 1.4rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.card-content p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Botão de Link (reutilizado de outros estilos) */
+.card-link {
+    display: block;
+    /* Ocupa a largura toda */
+    margin: 1.5rem;
+    /* Margem interna (para não colar nas bordas) */
+    margin-top: 0;
+    /* Remove margem do topo */
+
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+    /* Cor escura do tema */
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-link:hover {
+    background-color: var(--accent-green);
+    color: var(--bg-dark);
+    text-shadow: none;
+    /* Remove o glow genérico de <a> */
+}
+
+
+/* --- Link de Voltar --- */
+.link-voltar {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 2rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.link-voltar .material-symbols-outlined {
+    margin-right: 0.5rem;
+}
+
+.link-voltar:hover {
+    color: var(--accent-green);
+    text-shadow: none;
+}

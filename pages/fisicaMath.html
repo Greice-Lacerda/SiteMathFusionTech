@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathlet: Física Newtoniana & Colisões</title>
+
+    <link rel="stylesheet" href="../styles/fismat.css">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <main class="simulation-area">
+            <header>
+                <h1>Laboratório de Cinemática</h1>
+                <p>Ajuste as variáveis para acertar o alvo verde!</p>
+            </header>
+
+            <div id="stage">
+                <div id="target"></div>
+                <div id="ball"></div>
+                <div id="trajectory-path"></div>
+            </div>
+
+            <div class="status-bar">
+                <span>Pos: <b id="display-pos">0,0</b></span>
+                <span>Vel: <b id="display-vel">0,0</b></span>
+                <span id="game-status">Em curso...</span>
+            </div>
+        </main>
+
+        <aside class="controls-area">
+
+            <section class="theory-card">
+                <h2>📚 Física por trás</h2>
+                <p>O movimento é regido por duas equações fundamentais a cada frame:</p>
+
+                <div class="formula-box">
+                    <p>1. Velocidade Vertical (v<sub>y</sub>):</p>
+                    $$v_{y(t+1)} = v_{y(t)} + g$$
+                </div>
+
+                <div class="formula-box">
+                    <p>2. Colisão (Restituição):</p>
+                    $$v_{novo} = -v_{antigo} \times \epsilon$$
+                    <small>Onde &epsilon; é o coeficiente de elasticidade.</small>
+                </div>
+            </section>
+
+            <section class="control-panel">
+                <h2>⚙️ Parâmetros</h2>
+
+                <div class="input-group">
+                    <label for="gravityRange">Gravidade (g): <span id="val-gravity">0.05</span></label>
+                    <input type="range" id="gravityRange" min="0.05" max="1.0" step="0.01" value="0.05">
+                </div>
+
+                <div class="input-group">
+                    <label for="elasticityRange">Elasticidade (&epsilon;): <span id="val-elasticity">0.1</span></label>
+                    <input type="range" id="elasticityRange" min="0.1" max="1.2" step="0.05" value="0.1">
+                    <small class="tip"> > 1.0 ganha energia (impossível na natureza)</small>
+                </div>
+
+                <div class="input-group">
+                    <label for="velXRange">Força de Lançamento (v<sub>x</sub>): <span id="val-velx">1</span></label>
+                    <input type="range" id="velXRange" min="1" max="15" step="0.5" value="1">
+                </div>
+
+                <div class="actions">
+                    <button id="btn-reset" class="primary-btn">Lançar Novamente</button>
+                    <button id="btn-pause" class="secondary-btn">Pausar</button>
+                </div>
+            </section>
+        </aside>
+    </div>
+
+    <div id="feedback-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h2 id="modal-title">Título</h2>
+            <p id="modal-message">Explicação física aqui...</p>
+    
+            <div class="modal-footer">
+                <button onclick="closeModal()" class="primary-btn">Tentar Novamente</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../logic/fismat.js"></script>
+</body>
+
+</html>

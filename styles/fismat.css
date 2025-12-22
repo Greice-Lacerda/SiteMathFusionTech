@@ -1,0 +1,281 @@
+/* style.css */
+
+/* Variáveis de Cores */
+:root {
+    --bg-color: #1a1a1d;
+    --panel-bg: #2d2d30;
+    --accent: #4ecca3;
+    --accent-hover: #45b08c;
+    --text-main: #eeeeee;
+    --text-muted: #a0a0a0;
+    --danger: #ff5f6d;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    height: 195vh;
+    overflow: hidden;
+    /* Evita scroll na página inteira */
+    padding: 1rem;
+}
+
+/* Layout Principal */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    /* Simulação ocupa resto, Painel 350px */
+    height: 95vh;
+}
+
+/* Área da Simulação */
+.simulation-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-right: 1px solid #333;
+}
+
+#stage {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    background-color: #f0f4f8;
+    /* Fundo claro para contraste */
+    border: 4px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Elementos do Palco */
+#ball {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle at 30% 30%, var(--danger), #ffc371);
+    border-radius: 50%;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    will-change: transform;
+    z-index: 10;
+}
+
+#target {
+    position: absolute;
+    background-color: rgba(78, 204, 163, 0.3);
+    border: 2px dashed var(--accent);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2e7d63;
+    font-weight: bold;
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+/* Barra de Status */
+.status-bar {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+    font-family: monospace;
+    font-size: 1.1rem;
+    background: var(--panel-bg);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Painel Lateral */
+.controls-area {
+    background-color: var(--panel-bg);
+    padding: 25px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+h2 {
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Estilo das Fórmulas */
+.formula-box {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--accent);
+}
+
+/* Inputs e Botões */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type=range] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.tip {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: filter 0.2s;
+}
+
+.primary-btn {
+    background-color: var(--accent);
+    color: #1a1a1d;
+}
+
+.secondary-btn {
+    background-color: #555;
+    color: white;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+/* Mobile (Responsivo simples) */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        height: auto;
+    }
+
+    .simulation-area {
+        height: 60vh;
+    }
+
+    #stage {
+        height: 100%;
+    }
+}
+
+/* Adicione isso ao final do seu style.css */
+
+math {
+    font-family: 'Courier New', Courier, monospace;
+    /* Fonte monoespaçada para parecer fórmula */
+    font-weight: bold;
+    font-style: italic;
+    color: var(--accent);
+    /* Usa a cor de destaque (verde água) */
+    font-size: 1.1rem;
+    display: block;
+    /* Garante que fique em linha separada se necessário */
+    margin: 5px 0;
+}
+
+small math {
+    display: inline;
+    /* Para o símbolo pequeno no texto explicativo */
+    font-size: 1em;
+}
+
+/* --- Modal / Janela de Mensagem --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    /* Fundo escuro transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-content {
+    background-color: var(--panel-bg);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 20px rgba(78, 204, 163, 0.2);
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+/* Cores de status */
+.modal-content.success {
+    border-color: var(--accent);
+}
+
+.modal-content.success h2 {
+    color: var(--accent);
+}
+
+.modal-content.fail {
+    border-color: var(--danger);
+}
+
+.modal-content.fail h2 {
+    color: var(--danger);
+}
